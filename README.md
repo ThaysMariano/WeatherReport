@@ -37,7 +37,7 @@ Aplicação web feita em React + TypeScript que exibe os dados do clima atual e 
 ![sp](prints/saoPaulo.png)
 ![popup](prints/popup.png)
 
-## Tecnologias Utilizadas
+### Tecnologias Utilizadas
 - HTML e CSS
 - TypeScript
 - React
