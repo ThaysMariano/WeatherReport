@@ -1,0 +1,72 @@
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+.form {
+    position: relative;
+}
+
+.form > button {
+    position: absolute;
+    bottom: -5px;
+    right: 5px;
+    height: 2.5em;
+    font-size: 1.2em;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.form > button:hover {
+    cursor: pointer;
+}
+
+.searchInput {
+    margin-left: 1.5em;
+    height: 2.5em;
+    width: 20em;
+    background-color: rgb(6, 11, 20);
+    border: none;
+    border-radius: 50px;
+    padding-left: 1em;
+    padding-right: 40px;
+    color: white;
+    font-size: 1em;
+}
+
+.searchInput.light {
+    background-color: rgb(12, 51, 124);
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.error {
+    position: absolute;
+    left: 1.5em;
+    top: 40px;
+
+    height: 2em;
+    width: 20em;
+    background-color: rgba(255, 55, 55, 0.8);
+    text-align: center;
+    border-radius: 10px 10px 20px 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .searchInput,
+    .error {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .searchInput,
+    .error {
+        width: 25em;
+    }
+}

@@ -1,0 +1,22 @@
+.divDay {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.4em;
+}
+
+.divDay img {
+    height: 80px;
+}
+
+@media screen and (max-width: 600px) {
+    .divDay {
+        height: 80px;
+    }
+    .divDay img {
+        height: 60px;
+    }
+}

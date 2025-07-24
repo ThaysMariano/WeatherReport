@@ -1,0 +1,75 @@
+.historyList {
+    height: 400px;
+    width: 300px;
+
+    position: absolute;
+    position: fixed;
+    top: calc(50% - 200px);
+    right: calc(50% - 150px);
+    z-index: 10;
+
+    background-color: rgb(11, 19, 30);
+    border-radius: 20px;
+    color: white;
+}
+
+.historyList.light {
+    background-color: rgba(9, 28, 53);
+}
+
+.historyListTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 3px solid black;
+}
+
+.historyListTop.light {
+    border-bottom: 3px solid white;
+}
+
+.historyListTop > h2,
+.closeIcon {
+    font-size: 2em;
+}
+
+.closeIcon {
+    border-radius: 100%;
+    padding: 2px;
+}
+
+.closeIcon:hover {
+    cursor: pointer;
+    background-color: black;
+    border-radius: 100%;
+    padding: 2px;
+}
+
+.closeIcon.light:hover {
+    background-color: rgb(11, 19, 30);
+}
+
+.ul {
+    font-size: 1.5em;
+    user-select: none;
+}
+
+.ul > li {
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.ul > li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.empty {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.empty > .icon {
+    font-size: 3em;
+}

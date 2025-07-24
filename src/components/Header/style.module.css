@@ -1,0 +1,156 @@
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 16px;
+    margin-right: 16px;
+    width: 100%;
+
+    height: 4.5em;
+    background-color: rgba(11, 19, 30, 0.6);
+    border-radius: 40px;
+    color: white;
+}
+
+.header.light {
+    background-color: rgba(9, 28, 53, 0.4);
+}
+
+.titleLogo {
+    position: relative;
+}
+
+.titleLogo > img {
+    position: absolute;
+    bottom: 3px;
+    left: -5px;
+    height: 40px;
+}
+
+.h1 {
+    position: relative;
+    font-size: 2em;
+}
+
+.iconButtons {
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+}
+
+.icon {
+    font-size: 1.7em;
+    margin-right: 1.5em;
+    cursor: pointer;
+}
+
+.icon.light {
+    color: black;
+}
+
+.iconTheme:hover {
+    cursor: pointer;
+}
+
+.searchThemeButton {
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+}
+
+.searchButton > input,
+.icon {
+    margin-left: 1.5em;
+}
+
+.searchButton > input {
+    height: 2.5em;
+    width: 20em;
+    background-color: rgb(6, 11, 20);
+    border: none;
+    border-radius: 50px;
+    padding-left: 1em;
+    color: white;
+    font-size: 1em;
+}
+
+.searchButton.light > input {
+    background-color: rgb(12, 51, 124);
+}
+
+.searchButton > input:focus {
+    outline: none;
+}
+
+/* responsividade celular */
+@media screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+
+        padding: 1em;
+        text-align: center;
+        gap: 1em;
+        width: 90%;
+    }
+
+    .h1 {
+        font-size: 1.5em;
+    }
+
+    .titleLogo > img {
+        height: 30px;
+    }
+
+    .iconButtons {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .searchThemeButton {
+        margin: 0;
+    }
+}
+
+/* responsividade tablet */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .header {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        padding: 1.5em;
+        gap: 1.2em;
+        text-align: center;
+    }
+
+    .h1 {
+        font-size: 2em;
+    }
+
+    .iconButtons {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .searchThemeButton {
+        flex-direction: row;
+    }
+
+    .icon {
+        font-size: 1.5em;
+    }
+}

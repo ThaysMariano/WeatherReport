@@ -1,0 +1,245 @@
+h1,
+h2,
+h3,
+p,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.currentWeather {
+    margin-left: 16px;
+    min-height: 85vh;
+    width: 60%;
+    background-color: rgba(11, 19, 30, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+    position: relative;
+}
+
+.currentWeather.light {
+    background-color: rgba(9, 28, 53, 0.4);
+}
+
+.Clear {
+    background-image: url("/clen-weather.jpeg");
+    background-position: 90%, 80%;
+}
+.Clouds {
+    background-image: url("/clouds.jpg");
+}
+.Rain,
+.Drizzle {
+    background-image: url("/rain.jpg");
+}
+.Mist,
+.Smoke,
+.Fog,
+.Haze {
+    background-image: url("/mist.webp");
+}
+.Snow {
+    background-image: url("/snow.webp");
+}
+.Thunderstorm {
+    background-image: url("/thunderstorm.jpg");
+}
+
+.currentWeatherTop {
+    margin-top: 1em;
+    display: flex;
+    align-items: baseline;
+}
+
+.currentWeatherTop > h2,
+p {
+    color: white;
+}
+
+.currentWeatherTop > h2 {
+    font-size: 3em;
+    margin-left: 1em;
+    margin-right: 0.7em;
+}
+
+.currentWeatherTop > p {
+    font-size: 1.5em;
+}
+
+.tempAndDescription {
+    color: white;
+    font-size: 3em;
+    margin-left: 1em;
+}
+
+.moreInfos {
+    background-color: rgba(0, 0, 0, 0.562);
+    color: white;
+    width: 100%;
+    min-height: 30%;
+    font-size: 1.8em;
+    border-radius: 40px;
+    line-height: 50px;
+
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+}
+
+.moreInfosDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.icon img {
+    margin-right: 2em;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tempIcon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.emptyData {
+    font-size: 2em;
+    height: 100%;
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyData > .icon {
+    font-size: 3em;
+}
+
+/* Responsividade celular */
+@media screen and (max-width: 600px) {
+    .currentWeather {
+        width: 90%;
+        margin: 1em auto;
+        height: auto;
+        min-height: 200px;
+        border-radius: 20px;
+    }
+
+    .emptyData {
+        min-height: 200px;
+    }
+
+    .currentWeatherTop {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3em;
+        text-align: center;
+    }
+
+    .currentWeatherTop > h2 {
+        font-size: 1.7em;
+        margin-top: 1em;
+    }
+
+    .currentWeatherTop > p {
+        margin-bottom: 5px;
+        font-size: 1.3em;
+    }
+
+    .tempIcon {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tempAndDescription {
+        font-size: 2em;
+        text-align: center;
+        margin: 0;
+    }
+
+    .icon img {
+        width: 120px;
+        height: 120px;
+        margin: 0;
+    }
+
+    .moreInfos {
+        position: static;
+        flex-direction: column;
+        font-size: 1.2em;
+        border-radius: 20px;
+    }
+
+    .moreInfosDiv {
+        height: 10%;
+    }
+
+    .moreInfosDiv > p {
+        line-height: 40px;
+    }
+}
+
+/* responsividade tablet */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .currentWeather {
+        width: 90%;
+        margin: 1em auto;
+        height: auto;
+        min-height: 200px;
+        border-radius: 30px;
+    }
+
+    .emptyData {
+        min-height: 200px;
+    }
+
+    .currentWeatherTop {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .currentWeatherTop > h2 {
+        font-size: 2.5em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    .tempIcon {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .tempAndDescription {
+        font-size: 2.5em;
+        margin: 0;
+    }
+
+    .icon img {
+        width: 150px;
+        height: 150px;
+        margin: 0;
+    }
+
+    .moreInfos {
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 1.5em;
+        border-radius: 30px;
+        padding: 1em;
+        position: static;
+    }
+}

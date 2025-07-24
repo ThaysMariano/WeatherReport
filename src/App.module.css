@@ -1,0 +1,22 @@
+.main {
+    display: flex;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+}
+
+/* para menores que um monitor */
+@media screen and (max-width: 1024px) {
+    .main {
+        display: block;
+    }
+}
